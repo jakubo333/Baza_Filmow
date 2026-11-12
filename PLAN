@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Projektu: Baza Filmów</title>
+    <style>
+        :root {
+            --bg-color: #0F1115;
+            --card-bg: #1A1D24;
+            --text-main: #D3D5D9;
+            --text-heading: #FFFFFF;
+            --accent-color: #F5C518;
+            --border-color: #2C313C;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2, h3 {
+            color: var(--text-heading);
+            margin-top: 1.5em;
+        }
+
+        h1 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #121419;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #232730;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover td {
+            background-color: #1a1d24;
+        }
+
+        .agent-name {
+            font-weight: bold;
+            color: var(--text-heading);
+        }
+        
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Plan Projektu: Baza Filmów – Zespół Agentów AI</h1>
+
+    <h2>1. Cel i Założenia Projektu</h2>
+    <p>Celem zadania jest stworzenie prostej aplikacji internetowej, która umożliwia przeglądanie katalogu filmów, sprawdzanie informacji o aktorach oraz czytanie i dodawanie recenzji. Aplikacja jest tworzona przez zespół wyspecjalizowanych agentów AI, a docelowym rezultatem jest w pełni zintegrowany system wraz z kompleksową dokumentacją procesu deweloperskiego.</p>
+    <p><span class="highlight">Stos technologiczny:</span> PHP (backend), MySQL (relacyjna baza danych), HTML i CSS (interfejs użytkownika).</p>
+
+    <h2>2. Zespół Projektowy i Przydział Ról</h2>
+    <p>Zgodnie z najnowszą iteracją projektu, prace zostały podzielone pomiędzy pięciu wyspecjalizowanych agentów AI:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rola w PDF</th>
+                <th>Agent AI (Wykonawca)</th>
+                <th>Główne Odpowiedzialności i Zadania</th>
+                <th>Rezultaty (Deliverables)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Planning Agent</strong></td>
+                <td class="agent-name">Claude</td>
+                <td>Zbieranie wymagań, podział ról, projektowanie architektury i nadzór nad cyklem życia oprogramowania.</td>
+                <td><code>Docs/Specs.md</code>, <code>Docs/Architecture.md</code>, <code>Docs/Workflow.md</code>, <code>Sessions/Planning.md</code></td>
+            </tr>
+            <tr>
+                <td><strong>Data Analyst</strong></td>
+                <td class="agent-name">ChatGPT</td>
+                <td>Projektowanie schematu relacyjnej bazy danych (MySQL), zdefiniowanie kluczy obcych i relacji, wygenerowanie danych zasilających (klasyki kina, aktorzy, obsada, recenzje).</td>
+                <td><code>database/schema.sql</code>, <code>Sessions/DataAnalyst.md</code></td>
+            </tr>
+            <tr>
+                <td><strong>Backend Agent</strong></td>
+                <td class="agent-name">Gemini</td>
+                <td>Implementacja logiki PHP, konfiguracja bezpiecznego połączenia PDO, obsługa formularzy, dynamiczne zapytania SQL złączeniowe (JOIN) oraz walidacja danych na serwerze.</td>
+                <td><code>backend/config/config.php</code>, <code>film.php</code>, <code>aktor.php</code>, <code>dodaj_film.php</code>, <code>Sessions/Backend.md</code></td>
+            </tr>
+            <tr>
+                <td><strong>Frontend Agent</strong></td>
+                <td class="agent-name">Mistral</td>
+                <td>Projektowanie i wdrożenie interfejsu (HTML5/CSS3) zorientowanego na styl portalowy (Ciemny Motyw / Dark Mode, siatka CSS Grid) oraz ostylowanie formularzy.</td>
+                <td>Pliki interfejsu <code>index.php</code>, <code>frontend/css/style.css</code>, <code>Sessions/Frontend.md</code></td>
+            </tr>
+            <tr>
+                <td><strong>QA Agent</strong></td>
+                <td class="agent-name">Llama</td>
+                <td>Testowanie aplikacji (wyszukiwarka, walidacja ocen 1-10), weryfikacja integralności danych i złączeń, porównywanie wyników ze specyfikacją oraz zgłaszanie błędów.</td>
+                <td><code>Docs/QA-Report.md</code>, <code>Sessions/QA.md</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Harmonogram i Etapy Realizacji (Workflow)</h2>
+    <p>Proces realizacji projektu opiera się na czterech głównych etapach:</p>
+
+    <ol>
+        <li>
+            <strong>Etap I - Planowanie (Claude):</strong>
+            <ul>
+                <li>Ustalenie funkcjonalności: katalog filmów, wyszukiwarka, baza aktorów, recenzje z oceną 1-10.</li>
+                <li>Definicja modelu przepływu danych: Użytkownik &rarr; Frontend &rarr; PHP &rarr; MySQL.</li>
+                <li>Wygenerowanie specyfikacji i zarysu architektury.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Etap II - Implementacja Równoległa (ChatGPT, Gemini, Mistral):</strong>
+            <ul>
+                <li><em>Baza Danych:</em> Utworzenie tabel <code>filmy</code>, <code>aktorzy</code>, <code>obsada</code> (klucz główny jako para <code>film_id</code>, <code>aktor_id</code>), <code>recenzje</code>. Zasilenie bazy dużą paczką początkowych danych (V4).</li>
+                <li><em>Backend:</em> Napisanie skryptów pobierających dane i zabezpieczenie wejść przed atakami SQL Injection.</li>
+                <li><em>Frontend:</em> Zbudowanie widoków szczegółów, list filmów i formularzy.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Etap III - Integracja i Testowanie (Llama):</strong>
+            <ul>
+                <li>Połączenie modułów (PHP renderujące HTML z danymi z MySQL).</li>
+                <li>Przeprowadzenie planu testów: weryfikacja ładowania strony, poprawności szczegółów filmu, przypisań aktorów, zapisu recenzji, walidacji pustych pól oraz niepoprawnych ocen.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Etap IV - Dokumentacja (Cały Zespół):</strong>
+            <ul>
+                <li>Zapisanie podsumowań sesji w katalogu <code>Sessions/</code> dla każdego z agentów.</li>
+                <li>Sporządzenie raportu końcowego <code>Docs/Final-Report.md</code> oraz raportu z podziału ról <code>Docs/Agents-Roles.md</code>.</li>
+                <li>Opracowanie instrukcji instalacji w pliku <code>README.md</code>.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>4. Architektura i Przepływ Użytkownika</h2>
+    <p>Aplikacja została zaprojektowana tak, aby realizować płynny przepływ akcji:</p>
+    <ul>
+        <li>Użytkownik wchodzi na stronę główną, gdzie przegląda siatkę filmów pobraną z bazy MySQL lub używa wyszukiwarki.</li>
+        <li>Po kliknięciu w konkretny tytuł przechodzi do podstrony szczegółów (obsługiwanej przez backend PHP), gdzie widzi opis, obsadę oraz recenzje.</li>
+        <li>Użytkownik może zostawić własną recenzję wypełniając formularz. Backend weryfikuje dane (wymaga podania oceny w zakresie 1-10) i używa zapytań przygotowanych (PDO) w celu trwałego, bezpiecznego zapisu opinii w bazie danych.</li>
+        <li>Na podobnej zasadzie, kliknięcie nazwiska aktora otwiera jego profil z pełną filmografią realizowaną przez odpowiednie złączenie tabel.</li>
+    </ul>
+</div>
+
+</body>
+</html>
